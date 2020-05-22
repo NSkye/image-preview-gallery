@@ -18,6 +18,7 @@ const createImageServer = () => http.createServer(async (req, res) => {
   imageReadStream.on('open', () => {
     res.statusCode = 200
     res.setHeader('Content-Type', 'image/jpeg')
+    res.setHeader('Access-Control-Allow-Origin', '*')
     imageReadStream.pipe(res)
   })
 })

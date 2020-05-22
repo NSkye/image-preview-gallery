@@ -4,6 +4,8 @@
   "description": "Test case for RiXtrema company",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --open --mode development",
     "start:image-server": "node imageServer",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +20,18 @@
   },
   "homepage": "https://github.com/NSkye/image-preview-gallery#readme",
   "dependencies": {
-    "fs-extra": "^9.0.0"
+    "fs-extra": "^9.0.0",
+    "lodash.throttle": "^4.1.1",
+    "normalize.css": "^8.0.1",
+    "pixi.js": "^5.2.4"
+  },
+  "devDependencies": {
+    "css-loader": "^3.5.3",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
   }
 }
