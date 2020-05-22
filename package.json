@@ -1,0 +1,23 @@
+{
+  "name": "image-preview-gallery",
+  "version": "1.0.0",
+  "description": "Test case for RiXtrema company",
+  "main": "index.js",
+  "scripts": {
+    "start:image-server": "node imageServer",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NSkye/image-preview-gallery.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NSkye/image-preview-gallery/issues"
+  },
+  "homepage": "https://github.com/NSkye/image-preview-gallery#readme",
+  "dependencies": {
+    "fs-extra": "^9.0.0"
+  }
+}
