@@ -47,6 +47,10 @@ class Gallery {
     }, 300))
   }
 
+  /**
+   * Adjust stage size according to size
+   * of child containers
+   */
   adjustSize() {
     this.height = this.sections
       .map(({ height }) => height)
@@ -54,6 +58,9 @@ class Gallery {
     this.width = Math.max(...this.sections.map(section => section.width))
   }
 
+  /**
+   * Update section positioning
+   */
   updateSectionSpacings() {
     let previousHeight = 0
 
@@ -63,6 +70,10 @@ class Gallery {
     })
   }
 
+  /**
+   * Change section width according to
+   * width of window
+   */
   updateSectionWidths() {
     this.sections.map(section => {
       section.setMaxWidth(Math.min(window.innerWidth, this.maxWidth))
