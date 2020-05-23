@@ -1,12 +1,9 @@
-const IMAGE_HEIGHT = 45
-const IMAGE_WIDTH = 45
-const MAX_STAGE_WIDTH = 414
-export default imageCount => {
-  const imagesPerLine = Math.floor(Math.min(window.innerWidth, MAX_STAGE_WIDTH) / IMAGE_WIDTH)
+export default (imageCount, imageHeight, imageWidth, containerMaxWidth) => {
+  const imagesPerLine = Math.floor(Math.min(window.innerWidth, containerMaxWidth) / imageWidth)
   const linesPerStage = Math.ceil(imageCount / imagesPerLine)
 
-  const width = imagesPerLine * IMAGE_WIDTH
-  const height = linesPerStage * IMAGE_HEIGHT
+  const width = imagesPerLine * imageWidth
+  const height = linesPerStage * imageHeight
 
   return { width, height, imagesPerLine, linesPerStage }
 }
