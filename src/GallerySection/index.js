@@ -27,6 +27,10 @@ class GallerySection {
 
     this.loader = new PIXI.Loader()
     this.container = new PIXI.Container()
+    this.container.interactive = true
+    this.container.buttonMode = true
+    this.container.defaultCursor = 'pointer'
+
     this.header = new PIXI.Text(headerText, {
       fontFamily: 'Arial',
       fontWeight: '600'
