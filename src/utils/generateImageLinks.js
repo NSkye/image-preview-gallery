@@ -1,6 +1,6 @@
-export default function* generateImageLinks(domain, extension, count) {
-  let i = 0
-  while (i < count) {
+export default function* generateImageLinks(domain, extension, count, offset = 0) {
+  let i = 0 + offset
+  while (i < count + offset) {
     yield `${domain}/${i}.${extension}`
     i++
   }

@@ -1,5 +1,5 @@
-export default (imageCount, imageHeight, imageWidth, containerMaxWidth) => {
-  const imagesPerLine = Math.floor(Math.min(window.innerWidth, containerMaxWidth) / imageWidth)
+export default ({ imageCount, imageHeight, imageWidth, maxWidth }) => {
+  const imagesPerLine = Math.floor(maxWidth / imageWidth)
   const linesPerStage = Math.ceil(imageCount / imagesPerLine)
 
   const width = imagesPerLine * imageWidth
