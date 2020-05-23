@@ -27,10 +27,14 @@ class GallerySection {
 
     this.loader = new PIXI.Loader()
     this.container = new PIXI.Container()
-    this.header = new PIXI.Text(headerText)
+    this.header = new PIXI.Text(headerText, {
+      fontFamily: 'Arial',
+      fontWeight: '600'
+    })
     this.localOffset = this.header.height + 10
     this.container.addChild(this.header)
     this.header.y = 10
+    this.header.x = 45
     this.links = imageLinks
   
     const { imagesPerLine, linesPerStage, width, height } = calculateContainerSize({
